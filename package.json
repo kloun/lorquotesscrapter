@@ -1,0 +1,25 @@
+{
+  "name": "lorquotesscrapter",
+  "version": "1.0.0",
+  "description": "LorQuotes dump Scrapter",
+  "keywords": [
+    "mongodb",
+    "selemium"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "Github.com/kloun/lorquotesscrapter"
+  },
+  "license": "ISC",
+  "author": "Victor Kukshiev",
+  "type": "commonjs",
+  "main": "scrapter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "geckodriver": "^6.1.0",
+    "mongodb": "^7.0.0",
+    "selenium-webdriver": "^4.40.0"
+  }
+}

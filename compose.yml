@@ -1,0 +1,25 @@
+services:
+  #myapplication:
+   # image: mongodb/mongodb-community-server:8.0-ubi8
+   # environment:
+    #  - CONN_STR=mongodb://user:pass@mongodb
+    #command: '/bin/bash -c "sleep 5; mongosh $$CONN_STR --eval \"show dbs;\""'
+    #depends_on:
+#      - mongodb
+  mongodb:
+    image: mongodb/mongodb-community-server:8.0-ubi8
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=lorquotesadmin
+      - MONGODB_INITDB_ROOT_PASSWORD=lorquotesapi
+    ports:
+      - 27017:27017
+    volumes:
+      - type: bind
+        source: ~/data
+        target: /data/db
+        
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 10.10.10.0/24
